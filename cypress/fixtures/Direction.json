@@ -5,6 +5,7 @@
     "Option"        : "#optional",
     "Sort"          : ".order > .dropdown",
     "SortRating"    : "[value=,rating] > a",
-    "OptionalText"  : "textarea"
+    "OptionalText"  : "textarea",
+    "AddDelivery"   : "#footerOpen > .button"
 
 }

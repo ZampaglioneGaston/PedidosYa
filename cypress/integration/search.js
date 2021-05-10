@@ -4,12 +4,12 @@
 describe('DeliveryPizza', function(){
 
     it('PedidosYa', function(){
-        cy.visit('/');                                                    //Ingreso a pedidos ya Argentina.
+        cy.visit('/');                                                     //Ingreso a pedidos ya Argentina.
 
-        cy.fixture('Direction').then((variables) => {                    //Ingreso direccion, ciudad, opcion.
+        cy.fixture('Direction').then((variables) => {                      //Ingreso direccion, ciudad, opcion.
             cy.get(variables.Country).click();                       
             cy.get(variables.City).click();  
-            cy.city('[data-option-array-index="121"]');
+            cy.city('[data-option-array-index="121"]');                    //Cordoba
             cy.get(variables.Adress).type('Duarte Quiros 10')
             cy.get(variables.Option).type('Pizza')
         })
@@ -21,6 +21,7 @@ describe('DeliveryPizza', function(){
         cy.fixture('Direction').then((variables) => {                       //Ingreso direccion, ciudad, opcion.
             cy.get(variables.Sort).click();                                 //Menu de ordenamiento
         })
+    
         cy.sort('[value="rating"] > a');                                    // Ordeno por puntuacion
         cy.restaurant('[data-url="https://www.pedidosya.com.ar/restaurantes/cordoba/grido-helados-3122-velez-sarsfield-ii-av-velez-sarsfield-272-menu"] > .restaurantData > .infoFooter > .callToAction > .button');
 
@@ -28,18 +29,17 @@ describe('DeliveryPizza', function(){
         cy.wait(1000);
         cy.fixture('Direction').then((variables) =>{
             cy.get(variables.OptionalText).type('Que venga caliente pls')   //Opcional en pedido
+            cy.wait(1000);
+            cy.get(variables.AddDelivery).click();                          //Boton agregar al pedido
+            cy.wait(1000);  
         })
             
-        cy.wait(1000);
-        cy.get('#footerOpen > .button').click();                            //Boton agregar al pedido
-        cy.wait(1000);
 
         cy.fixture('Direction').then((variables) => {
-            cy.get(variables.Adress).type('Duarte Quiros 10', {force: true}) //Force true > elemento invisible
-
+            cy.get(variables.Adress).type('Duarte Quiros 10', {force: true})  
         });   
 
-        cy.search('#search');                             //Force true > elemento invisible
+        cy.search('#search');                                               
         cy.wait(3000);                                                      //Delay para que carge el mapa
         cy.ConfirmMap('#confirm');                                          // Confirmo Mapa                                                            
 
