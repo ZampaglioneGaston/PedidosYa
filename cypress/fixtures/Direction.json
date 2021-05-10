@@ -1,0 +1,10 @@
+{
+    "Country"       : "#link-ar > .flag-sprite",
+    "City"          : "#selectCity_chosen > .chosen-single > div > b",
+    "Adress"        : "#address",
+    "Option"        : "#optional",
+    "Sort"          : ".order > .dropdown",
+    "SortRating"    : "[value=,rating] > a",
+    "OptionalText"  : "textarea"
+
+}
