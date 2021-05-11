@@ -1,6 +1,7 @@
 {
     "Country"       : "#link-ar > .flag-sprite",
     "City"          : "#selectCity_chosen > .chosen-single > div > b",
+    "CityIndex"     : "[data-option-array-index]",
     "Adress"        : "#address",
     "Option"        : "#optional",
     "Sort"          : ".order > .dropdown",

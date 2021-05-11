@@ -28,7 +28,7 @@
 
 Cypress.Commands.add('ConfirmMap', (element) => {cy.get(element).click({force: true})}) 
 
-Cypress.Commands.add('city', (element) => {cy.get(element).click({force: true})}) 
+Cypress.Commands.add('city', (element, indice) => {cy.get(element).eq(indice).click({force: true})}) 
 
 Cypress.Commands.add('search', (element) => {cy.get(element).click({force: true})}) 
 
