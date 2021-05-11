@@ -26,22 +26,24 @@
 
 
 
-Cypress.Commands.add('AcceptMap', (SearchB, ConfirmMap) => {
+Cypress.Commands.add('AcceptMap', (SearchB, ConfirmMap) => {   //Confirmo mapa y boton de busqueda
     cy.get(SearchB).click({force: true});
     cy.wait(3000); 
     cy.get(ConfirmMap).click({force: true});
 
 })
 
+Cypress.Commands.add('World', (Country, CityList, CityIndex, Index) => {  // Ingreso pais y ciudad
+    
+    cy.get(Country).click();                       
+    cy.get(CityList).click();  
+    cy.get(CityIndex).eq(Index).click({force: true});     
 
+})
 
-
-Cypress.Commands.add('city', (element, indice) => {cy.get(element).eq(indice).click({force: true})}) 
 
 Cypress.Commands.add('sort', (element) => {cy.get(element).click({force: true})}) 
 
 Cypress.Commands.add('restaurant', (element) => {cy.get(element).click({force: true})}) 
 
 Cypress.Commands.add('item', (element) => {cy.get(element).click({force: true})}) 
-
-Cypress.Commands.add('optionalText', (element) => {cy.get(element).click({force: true})}) 
