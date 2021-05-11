@@ -1,12 +1,14 @@
 {
     "Country"       : "#link-ar > .flag-sprite",
-    "City"          : "#selectCity_chosen > .chosen-single > div > b",
+    "CityList"      : "#selectCity_chosen > .chosen-single > div > b",
     "CityIndex"     : "[data-option-array-index]",
     "Adress"        : "#address",
     "Option"        : "#optional",
     "Sort"          : ".order > .dropdown",
     "SortRating"    : "[value=,rating] > a",
     "OptionalText"  : "textarea",
-    "AddDelivery"   : "#footerOpen > .button"
+    "AddDelivery"   : "#footerOpen > .button",
+    "SearchB"       : "#search",
+    "ConfirmMap"    : "#confirm"
 
 }

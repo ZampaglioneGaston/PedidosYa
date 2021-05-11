@@ -8,15 +8,13 @@ describe('DeliveryPizza', function(){
 
         cy.fixture('Direction').then((parameter) => {                      // Ingreso direccion, ciudad, opcion.
             cy.get(parameter.Country).click();                       
-            cy.get(parameter.City).click();  
+            cy.get(parameter.CityList).click();  
             cy.city(parameter.CityIndex, 121);                             // Cordoba
             cy.get(parameter.Adress).type('Duarte Quiros 10')
             cy.get(parameter.Option).type('Pizza')
+            cy.AcceptMap(parameter.SearchB, parameter.ConfirmMap);
         })
 
-        cy.search('#search')
-        cy.wait(1000);                                                      // Delay para que carge el mapa
-        cy.ConfirmMap('#confirm');                                          // Confirmo Mapa 
 
         cy.fixture('Direction').then((parameter) => {                       
             cy.get(parameter.Sort).click();                                 // Menu de ordenamiento
@@ -37,11 +35,8 @@ describe('DeliveryPizza', function(){
 
         cy.fixture('Direction').then((parameter) => {
             cy.get(parameter.Adress).type('Duarte Quiros 10', {force: true})  
+            cy.AcceptMap(parameter.SearchB, parameter.ConfirmMap); 
         });   
-
-        cy.search('#search');                                               
-        cy.wait(3000);                                                      // Delay para que carge el mapa
-        cy.ConfirmMap('#confirm');                                          // Confirmo Mapa                                                            
 
     })
 })

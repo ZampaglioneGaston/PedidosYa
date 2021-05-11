@@ -26,11 +26,17 @@
 
 
 
-Cypress.Commands.add('ConfirmMap', (element) => {cy.get(element).click({force: true})}) 
+Cypress.Commands.add('AcceptMap', (SearchB, ConfirmMap) => {
+    cy.get(SearchB).click({force: true});
+    cy.wait(3000); 
+    cy.get(ConfirmMap).click({force: true});
+
+})
+
+
+
 
 Cypress.Commands.add('city', (element, indice) => {cy.get(element).eq(indice).click({force: true})}) 
-
-Cypress.Commands.add('search', (element) => {cy.get(element).click({force: true})}) 
 
 Cypress.Commands.add('sort', (element) => {cy.get(element).click({force: true})}) 
 
