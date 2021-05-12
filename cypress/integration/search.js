@@ -25,7 +25,7 @@ describe('DeliveryPizza', function(){
         cy.restaurant('[data-url="https://www.pedidosya.com.ar/restaurantes/cordoba/grido-helados-3122-velez-sarsfield-ii-av-velez-sarsfield-272-menu"] > .restaurantData > .infoFooter > .callToAction > .button');
 
         //Item
-        cy.item('[data-id="23570597"] > b');                                            // Item > pizza
+        cy.item(this.parameter.OnionPizza);                                            // Item > pizza
         cy.wait(1000);
 
         //Delivery

@@ -5,9 +5,11 @@
     "Adress"        : "#address",
     "Option"        : "#optional",
     "Sort"          : ".order > .dropdown",
+    "SortRating"    : "[value='rating']",
     "OptionalText"  : "textarea",
     "AddDelivery"   : "#footerOpen > .button",
     "SearchB"       : "#search",
-    "ConfirmMap"    : "#confirm"
+    "ConfirmMap"    : "#confirm",
+    "OnionPizza"    : "[data-id='23570597']"
 
 }
