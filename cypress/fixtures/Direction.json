@@ -5,7 +5,6 @@
     "Adress"        : "#address",
     "Option"        : "#optional",
     "Sort"          : ".order > .dropdown",
-    "SortRating"    : "[value=,rating] > a",
     "OptionalText"  : "textarea",
     "AddDelivery"   : "#footerOpen > .button",
     "SearchB"       : "#search",
