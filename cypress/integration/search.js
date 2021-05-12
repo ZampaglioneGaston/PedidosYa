@@ -1,4 +1,3 @@
-
 /// <reference types="cypress"/>
 
 describe('DeliveryPizza', function(){
@@ -21,8 +20,8 @@ describe('DeliveryPizza', function(){
 
         //Restaurant
         cy.get(this.parameter.Sort).click();                                            // Menu de ordenamiento
-        cy.sort('[value="rating"] > a');                                                // Ordeno por puntuacion
-        cy.restaurant('[data-url="https://www.pedidosya.com.ar/restaurantes/cordoba/grido-helados-3122-velez-sarsfield-ii-av-velez-sarsfield-272-menu"] > .restaurantData > .infoFooter > .callToAction > .button');
+        cy.sort(this.parameter.SortRating);                                                // Ordeno por puntuacion
+        cy.restaurant(this.parameter.GridoSanJuan);
 
         //Item
         cy.item(this.parameter.OnionPizza);                                            // Item > pizza

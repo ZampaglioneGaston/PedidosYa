@@ -5,11 +5,12 @@
     "Adress"        : "#address",
     "Option"        : "#optional",
     "Sort"          : ".order > .dropdown",
-    "SortRating"    : "[value='rating']",
+    "SortRating"    : "[value='rating'] > a",
     "OptionalText"  : "textarea",
     "AddDelivery"   : "#footerOpen > .button",
     "SearchB"       : "#search",
     "ConfirmMap"    : "#confirm",
-    "OnionPizza"    : "[data-id='23570597']"
-
+    "OnionPizza"    : "[data-id='23570597']",
+    "GridoVelez"    : "[data-url='https://www.pedidosya.com.ar/restaurantes/cordoba/grido-helados-3122-velez-sarsfield-ii-av-velez-sarsfield-272-menu'] > .restaurantData > .infoFooter > .callToAction > .button",
+    "GridoSanJuan"  : "[data-url='https://www.pedidosya.com.ar/restaurantes/cordoba/grido-helados---3033---bv.-san-juan-i-menu'] > .restaurantData > header > h3 > .arrivalName"
 }
